@@ -21,7 +21,7 @@ pdf2jpeg2pdf [-h] [-o OUTPUT] [--dpi DPI] input
 To convert a PDF (`input.pdf`) to JPEG and back to PDF (`output.pdf`) with DPI of 200, use the following command:
 
 ```bash
-pdf2jpeg2pdf --output_pdf output.pdf --dpi 200 input.pdf
+pdf2jpeg2pdf --output output.pdf --dpi 200 input.pdf
 ```
 
 Print the help message for more info:
@@ -34,7 +34,7 @@ pdf2jpeg2pdf --help
 - `input`: Path to the input PDF file.
 
 ## Options
-- `--output_pdf`: Path for the output PDF file. Default \<input\>_jpeg.pdf.
+- `--output`: Path for the output PDF file. Default \<input\>_jpeg.pdf.
 - `--dpi`: DPI (dots per inch) for image conversion (default is 300).
 
 ## License
