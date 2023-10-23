@@ -1,5 +1,7 @@
 # pdf2jpeg2pdf
-A simple Python tool that convert PDF to JPEG and back to PDF
+A simple Python tool that convert PDF to JPEG and back to PDF.
+
+Use this if you are going to print a PDF document with lots of vector images using the printer "HP® Officejet Pro X551dw". Trust me!
 
 ## Installation
 You can install the tool using git and pip:
