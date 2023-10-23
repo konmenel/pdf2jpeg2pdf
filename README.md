@@ -3,6 +3,9 @@ A simple Python tool that convert PDF to JPEG and back to PDF.
 
 Use this if you are going to print a PDF document with lots of vector images using the printer "HP® Officejet Pro X551dw". Trust me!
 
+## Dependencies
+- [pdf2image](https://pypi.org/project/pdf2image/)
+
 ## Installation
 You can install the tool using git and pip:
 
@@ -12,8 +15,22 @@ cd pdf2jpeg2pdf
 pip install -e .
 ```
 
-## Dependencies
-- [pdf2image](https://pypi.org/project/pdf2image/)
+Extra steps might be needed depending on the Operating System as explained [here](https://pypi.org/project/pdf2image/). In short, follow the steps below.
+
+### Mac
+You need to install [poppler](https://poppler.freedesktop.org/):
+
+```bash
+brew install poppler
+```
+
+### Windows
+You need to install poppler and add it to [PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+
+The recommended version can be found [here](https://github.com/oschwartz10612/poppler-windows/releases/). Then add the `bin/` folder to the environment variable "PATH" as explained [here](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+
+### Linux
+Most likely you are good to go. However, if something is missing install `poppler-utils` from your package manager.
 
 ## Usage
 ```bash
