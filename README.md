@@ -14,15 +14,28 @@ pip install -e .
 - [pdf2image](https://pypi.org/project/pdf2image/)
 
 ## Usage
-To convert a PDF to JPEG and back to PDF, use the following command:
+```bash
+pdf2jpeg2pdf [-h] [-o OUTPUT] [--dpi DPI] input
+```
+
+To convert a PDF (`input.pdf`) to JPEG and back to PDF (`output.pdf`) with DPI of 200, use the following command:
+
 ```bash
 pdf2jpeg2pdf --output_pdf output.pdf --dpi 200 input.pdf
 ```
 
-## Options
+Print the help message for more info:
+
+```bash
+pdf2jpeg2pdf --help
+```
+
+## Arguments
 - `input`: Path to the input PDF file.
-- `--output_pdf`: Path for the output PDF file (default is input PDF).
-- `--dpi`: DPI (dots per inch) for image conversion (default is 200).
+
+## Options
+- `--output_pdf`: Path for the output PDF file. Default \<input\>_jpeg.pdf.
+- `--dpi`: DPI (dots per inch) for image conversion (default is 300).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/konmenel/pdf2jpeg2pdf/blob/main/LICENSE) file for details.
