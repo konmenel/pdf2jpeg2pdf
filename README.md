@@ -34,8 +34,8 @@ pdf2jpeg2pdf --help
 - `input`: Path to the input PDF file.
 
 ## Options
-- `--output`: Path for the output PDF file. Default \<input\>_jpeg.pdf.
-- `--dpi`: DPI (dots per inch) for image conversion (default is 300).
+- `-o`, `--output`: Path for the output PDF file. Default "\<input\>_jpeg.pdf".
+- `--dpi`: DPI (dots per inch) for image conversion. Default 300.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/konmenel/pdf2jpeg2pdf/blob/main/LICENSE) file for details.
