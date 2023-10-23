@@ -4,6 +4,7 @@ A simple Python tool that convert PDF to JPEG and back to PDF.
 Use this if you are going to print a PDF document with lots of vector images using the printer "HP® Officejet Pro X551dw". Trust me!
 
 ## Dependencies
+- [poppler](https://poppler.freedesktop.org/)
 - [pdf2image](https://pypi.org/project/pdf2image/)
 
 ## Installation
