@@ -61,7 +61,7 @@ pdf2jpeg2pdf --help
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/konmenel/pdf2jpeg2pdf/blob/main/LICENSE) file for details.
 
 ## Example
-Running the following code from the root directory of the package will convert the PDF `Latex_tutorial.pdf` in the `example` directory file to JPEG images with a DPI of 300, then reassemble the images into a PDF named `Latex_tutorial.pdf` in the same directory.
+Running the following code from the root directory of the package will convert the PDF `Latex_tutorial.pdf` in the `example` directory file to JPEG images with a DPI of 200, then reassemble the images into a PDF named `Latex_tutorial.pdf` in the same directory.
 
 ```bash
 pdf2jpeg2pdf --dpi 200 example/Latex_tutorial.pdf
