@@ -1,7 +1,18 @@
 #!/usr/bin/env python3
-"""A simple Python tool that convert PDF to JPEG and back to PDF."""
+"""A simple Python tool that convert PDF to JPEG and back to PDF.
+
+Example
+-------
+Running the following code from the root directory of the package will convert the PDF
+`Latex_tutorial.pdf` in the `example` directory file to JPEG images with a DPI of 200,
+then reassemble the images into a PDF named `Latex_tutorial.pdf` in the same directory.
+```bash
+python3 ./pdf2jpeg2pdf/pdf2jpeg2pdf.py --dpi 200 example/Latex_tutorial.pdf
+```
+"""
 import os
 import argparse
+import itertools
 from pdf2image import convert_from_path
 
 DEFAULT_DPI: int = 300
@@ -9,10 +20,10 @@ DEFAULT_DPI: int = 300
 
 def get_unique_output_name(output_pdf: str) -> str:
     base_name, ext = os.path.splitext(output_pdf)
-    count = 1
-    while os.path.exists(output_pdf):
-        output_pdf = f"{base_name}-{count}{ext}"
-        count += 1
+    for i in itertools.count(1):
+        if not os.path.exists(output_pdf):
+            break
+        output_pdf = f"{base_name}-{i}{ext}"
     return output_pdf
 
 
