@@ -13,6 +13,7 @@ python3 ./pdf2jpeg2pdf/pdf2jpeg2pdf.py --dpi 200 example/Latex_tutorial.pdf
 import os
 import argparse
 import itertools
+from typing import Union
 from pdf2image import convert_from_path
 
 DEFAULT_DPI: int = 300
@@ -49,18 +50,20 @@ def parse_args() -> argparse.Namespace:
     # Set default output PDF if not provided
     if args.output is None:
         args.output = os.path.splitext(args.input)[0] + "_jpeg.pdf"
-
     # Add .pdf extension if missing
     if not args.output.endswith(".pdf"):
         args.output += ".pdf"
-
-    # Check if output PDF already exists
+    # If output file exist create a unique name
     args.output = get_unique_output_name(args.output)
 
     return args
 
 
-def pdf_to_jpeg_to_pdf(input_pdf_path, output_pdf_path, dpi=DEFAULT_DPI):
+def pdf_to_jpeg_to_pdf(
+    input_pdf_path: Union[str, os.PathLike],
+    output_pdf_path: Union[str, os.PathLike],
+    dpi: int = DEFAULT_DPI,
+) -> None:
     images = convert_from_path(input_pdf_path, dpi=dpi)
     images[0].save(output_pdf_path, save_all=True, append_images=images[1:])
 
